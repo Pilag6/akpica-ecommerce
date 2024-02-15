@@ -17,7 +17,6 @@ const ProductContextProvider = ({ children }) => {
             try {
                 const response = await fetch(MAIN_URL);
                 const dataFetched = await response.json();
-                // console.log(dataFetched.products);
                 setProductData(dataFetched.products);
             } catch (error) {
                 console.error("Something went wrong", error);
