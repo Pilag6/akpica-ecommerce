@@ -3,85 +3,58 @@ import { ProductContext } from "../contexts/ProductContext.jsx";
 
 // Components
 import Cards from "../components/Cards/Cards.jsx";
+import { Link } from "react-router-dom";
 
 const Home = () => {
-    const { productData } = useContext(ProductContext);
+    const { onlyWomen, onlyMen } = useContext(ProductContext);
 
     return (
         <>
-            <section>Women</section>
-            <section>Men</section>
+            {/* Women Section */}
+            <section className="women-section">
+                <h2>Women</h2>
+
+                <div className="cards-container">
+                    {onlyWomen.slice(0, 4).map((item) => {
+                        return (
+                            <Cards
+                                key={item.id}
+                                product={item}
+                                category={item.category.toUpperCase().slice(7)}
+                                id={item.id}
+                                images={item.images[0]}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        );
+                    })}
+                </div>
+
+                <Link to={"/women"}>See more products</Link>
+            </section>
+
+            {/* Men Section */}
+            <section className="men-section">
+                <h2>Men</h2>
+
+                <div className="cards-container">
+                    {onlyMen.slice(0, 4).map((item) => {
+                        return <Cards key={item.id}
+                        product={item}
+                        category={item.category.toUpperCase().slice(5)}
+                        id={item.id}
+                        images={item.images[0]}
+                        title={item.title}
+                        price={item.price}
+                        rating={item.rating} />;
+                    })}
+                </div>
+            </section>
+
             <section>Tech</section>
             <section>Home</section>
             <section>Beauty</section>
-
-            <div className="cards-container">
-                {productData.map((item) => {
-                    return (
-                        <Cards key={item.id} product={item} />
-
-                        // <article className="card-article" key={item.id}>
-                        //     <div className="card-img">
-                        //         <img src={item.images[0]} alt="" />
-                        //         <p className="card-category">{item.category}</p>
-                        //     </div>
-
-                        //     <Link
-                        //         className="card-title"
-                        //         to={`/product/${item.id}`}
-                        //     >
-                        //         <h2 className="card-title-content">
-                        //             {item.title}
-                        //         </h2>
-                        //     </Link>
-
-                        //     <p className="card-rating">
-
-                        //         {item.rating > 4.75 ? (
-                        //             <>
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //             </>
-                        //         ) : item.rating > 4.5 ? (
-                        //             <>
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStarHalf />
-                        //             </>
-                        //         ) : item.rating > 4.25 ? (
-                        //             <>
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //             </>
-                        //         ) : (
-                        //             <>
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStar />
-                        //                 <FaStarHalf />
-                        //             </>
-                        //         )}
-
-                        //         <sup> ({item.rating})</sup>
-                        //     </p>
-
-                        //     <div className="card-price-btn">
-                        //         <p className="card-price">${item.price}</p>
-                        //         <button className="card-btn">
-                        //             Add to Cart
-                        //         </button>
-                        //     </div>
-                        // </article>
-                    );
-                })}
-            </div>
         </>
     );
 };

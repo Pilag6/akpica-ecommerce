@@ -26,8 +26,29 @@ const ProductContextProvider = ({ children }) => {
         fetchProducts();
     }, []);
 
+    // Filters (Women, Men, Tech, Home, etc)
+
+    // Only Womens Products
+
+    const filteredWomen = productData.filter((item) => {
+        return item.category.toLowerCase().startsWith("women");
+    });
+
+    const onlyWomen = [...filteredWomen].sort(() => Math.random() - 0.5);
+
+    // Filtered Womens Products
+
+    const filteredMen = productData.filter((item) => {
+        return item.category.toLowerCase().startsWith("men");
+    });
+
+    const onlyMen = [...filteredMen].sort(() => Math.random() - 0.5);
+
+
     return (
-        <ProductContext.Provider value={{ productData, setProductData }}>
+        <ProductContext.Provider
+            value={{ productData, setProductData, onlyWomen, onlyMen }}
+        >
             {children}
         </ProductContext.Provider>
     );

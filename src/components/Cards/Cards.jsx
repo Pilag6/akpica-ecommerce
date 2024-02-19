@@ -9,23 +9,21 @@ import { FaStarHalf } from "react-icons/fa";
 // Styles
 import "./Cards.css";
 
-const Cards = ({product}) => {
-  
-
+const Cards = ({ id, images, title, category, price, rating }) => {
     return (
         <>
             <article className="card-article">
                 <div className="card-img">
-                    <img src={product.images[0]} alt="" />
-                    <p className="card-category">{product.category}</p>
+                    <img src={images} alt="" />
+                    <p className="card-category">{category}</p>
                 </div>
 
-                <Link className="card-title" to={`/product/${product.id}`}>
-                    <h2 className="card-title-content">{product.title}</h2>
+                <Link className="card-title" to={`/product/${id}`}>
+                    <h2 className="card-title-content">{title}</h2>
                 </Link>
 
                 <p className="card-rating">
-                    {product.rating > 4.75 ? (
+                    {rating > 4.75 ? (
                         <>
                             <FaStar />
                             <FaStar />
@@ -33,7 +31,7 @@ const Cards = ({product}) => {
                             <FaStar />
                             <FaStar />
                         </>
-                    ) : product.rating > 4.5 ? (
+                    ) : rating > 4.5 ? (
                         <>
                             <FaStar />
                             <FaStar />
@@ -41,7 +39,7 @@ const Cards = ({product}) => {
                             <FaStar />
                             <FaStarHalf />
                         </>
-                    ) : product.rating > 4.25 ? (
+                    ) : rating > 4.25 ? (
                         <>
                             <FaStar />
                             <FaStar />
@@ -57,11 +55,11 @@ const Cards = ({product}) => {
                         </>
                     )}
 
-                    <sup> ({product.rating})</sup>
+                    <sup> ({rating})</sup>
                 </p>
 
                 <div className="card-price-btn">
-                    <p className="card-price">${product.price}</p>
+                    <p className="card-price">${price}</p>
                     <button className="card-btn">Add to Cart</button>
                 </div>
             </article>
