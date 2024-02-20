@@ -9,9 +9,14 @@ import { FaStarHalfAlt } from "react-icons/fa";
 // Styles
 import "./Cards.css";
 
-const Cards = ({ id, images, title, category, price, rating, product }) => {
+// Cart Context
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext.jsx";
 
-    console.log(product)
+const Cards = ({ id, images, title, category, price, rating, product }) => {
+    const { addToCart } = useContext(CartContext);
+
+    // console.log(product)
     return (
         <>
             <article className="card-article">
@@ -62,7 +67,7 @@ const Cards = ({ id, images, title, category, price, rating, product }) => {
 
                 <div className="card-price-btn">
                     <p className="card-price">${price}.-</p>
-                    <button className="card-btn">Add to Cart</button>
+                    <button onClick={() => addToCart(product, id)} className="card-btn">Add to Cart</button>
                 </div>
             </article>
         </>

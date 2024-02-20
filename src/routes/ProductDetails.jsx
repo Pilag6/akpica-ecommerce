@@ -1,8 +1,12 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { CartContext } from "../contexts/CartContext.jsx";
 
 const ProductDetails = () => {
     const { id } = useParams();
+
+    const { addToCart } = useContext(CartContext);
 
     const [data, setData] = useState([]);
 
@@ -32,6 +36,8 @@ const ProductDetails = () => {
                 <img src={data.images[0]} alt="" />
             )}
             <Link to={"/"}>Go Home</Link>
+            <br />
+            <button onClick={() => addToCart(data, data.id)} className="card-btn">Add to Cart</button>
         </div>
     );
 };

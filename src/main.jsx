@@ -8,13 +8,16 @@ import { BrowserRouter } from "react-router-dom";
 // Contexts
 import ProductContextProvider from "./contexts/ProductContext.jsx";
 import SidebarProvider from "./contexts/SidebarContext.jsx";
+import CartContextProvider from "./contexts/CartContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <SidebarProvider>
-        <ProductContextProvider>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
-        </ProductContextProvider>
-    </SidebarProvider>
+    <CartContextProvider>
+        <SidebarProvider>
+            <ProductContextProvider>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </ProductContextProvider>
+        </SidebarProvider>
+    </CartContextProvider>
 );
