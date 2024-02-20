@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     const {
-        productData,
         onlyWomen,
         onlyMen,
         onlyTech,
@@ -63,6 +62,7 @@ const Home = () => {
                         );
                     })}
                 </div>
+                <Link to={"/men"}>See more products</Link>
             </section>
 
             {/* Tech Section */}
@@ -85,6 +85,7 @@ const Home = () => {
                         );
                     })}
                 </div>
+                <Link to={"/tech"}>See more products</Link>
             </section>
 
             {/* Home Section */}
@@ -107,6 +108,7 @@ const Home = () => {
                         );
                     })}
                 </div>
+                <Link to={"/home-deco"}>See more products</Link>
             </section>
 
             {/* Beauty Section */}
@@ -129,6 +131,7 @@ const Home = () => {
                         );
                     })}
                 </div>
+                <Link to={"/beauty"}>See more products</Link>
             </section>
 
             {/* Sunglasses Section */}
@@ -151,6 +154,7 @@ const Home = () => {
                         );
                     })}
                 </div>
+                <Link to={"/sunglasses"}>See more products</Link>
             </section>
 
             {/* Accessories Section */}
@@ -173,6 +177,7 @@ const Home = () => {
                         );
                     })}
                 </div>
+                <Link to={"/accessories"}>See more products</Link>
             </section>
 
         </>
