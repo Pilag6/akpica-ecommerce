@@ -6,7 +6,16 @@ import Cards from "../components/Cards/Cards.jsx";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const { onlyWomen, onlyMen } = useContext(ProductContext);
+    const {
+        productData,
+        onlyWomen,
+        onlyMen,
+        onlyTech,
+        onlyBeauty,
+        onlyHome,
+        onlyAccessories,
+        onlySunglasses,
+    } = useContext(ProductContext);
 
     return (
         <>
@@ -40,21 +49,132 @@ const Home = () => {
 
                 <div className="cards-container">
                     {onlyMen.slice(0, 4).map((item) => {
-                        return <Cards key={item.id}
-                        product={item}
-                        category={item.category.toUpperCase().slice(5)}
-                        id={item.id}
-                        images={item.images[0]}
-                        title={item.title}
-                        price={item.price}
-                        rating={item.rating} />;
+                        return (
+                            <Cards
+                                key={item.id}
+                                product={item}
+                                category={item.category.toUpperCase().slice(5)}
+                                id={item.id}
+                                images={item.images[0]}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        );
                     })}
                 </div>
             </section>
 
-            <section>Tech</section>
-            <section>Home</section>
-            <section>Beauty</section>
+            {/* Tech Section */}
+            <section className="tech-section product-section">
+                <h2>Tech</h2>
+
+                <div className="cards-container">
+                    {onlyTech.slice(0, 4).map((item) => {
+                        return (
+                            <Cards
+                                key={item.id}
+                                product={item}
+                                category={item.category.toUpperCase()}
+                                id={item.id}
+                                images={item.images[0]}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* Home Section */}
+            <section className="home-section product-section">
+                <h2>Home</h2>
+
+                <div className="cards-container">
+                    {onlyHome.slice(0, 4).map((item) => {
+                        return (
+                            <Cards
+                                key={item.id}
+                                product={item}
+                                category={item.category.toUpperCase()}
+                                id={item.id}
+                                images={item.images[0]}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* Beauty Section */}
+            <section className="beauty-section product-section">
+                <h2>Beauty</h2>
+
+                <div className="cards-container">
+                    {onlyBeauty.slice(0, 4).map((item) => {
+                        return (
+                            <Cards
+                                key={item.id}
+                                product={item}
+                                category={item.category.toUpperCase()}
+                                id={item.id}
+                                images={item.images[0]}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* Sunglasses Section */}
+            <section className="sunglasses-section product-section">
+                <h2>Sunglasses</h2>
+
+                <div className="cards-container">
+                    {onlySunglasses.slice(0, 4).map((item) => {
+                        return (
+                            <Cards
+                                key={item.id}
+                                product={item}
+                                category={item.category.toUpperCase()}
+                                id={item.id}
+                                images={item.images[0]}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* Accessories Section */}
+            <section className="accesories-section product-section">
+                <h2>Accesories</h2>
+
+                <div className="cards-container">
+                    {onlyAccessories.slice(0, 4).map((item) => {
+                        return (
+                            <Cards
+                                key={item.id}
+                                product={item}
+                                category={item.category.toUpperCase()}
+                                id={item.id}
+                                images={item.images[0]}
+                                title={item.title}
+                                price={item.price}
+                                rating={item.rating}
+                            />
+                        );
+                    })}
+                </div>
+            </section>
+
         </>
     );
 };
