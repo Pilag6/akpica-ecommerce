@@ -2,17 +2,26 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Hero.css";
 
+//icons
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
+//images
 import banner1 from "../../assets/banner-1.jpg";
 import banner2 from "../../assets/banner-2.jpg";
 
-//icons
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Hero = () => {
   //array of image-slider
   const imageSlider = [banner1, banner2];
 
+  //array of texts
+  const textSlider = [
+    {promo: "New Collection", title: "Women Fashion"},
+    {promo: "New Collection", title: "Men Fashion"}
+  ]
+
   const [slide, setSlide] = useState(0);
+  // const [slideText, setSlideText] = useState(0)
 
   const handlePrevSlide = () => {
     setSlide((prevSlide) =>
@@ -29,6 +38,7 @@ const Hero = () => {
   return (
     <>
       <div className="hero">
+
         <img src={imageSlider[slide]} alt={`image ${slide + 1}`} />
 
         <div className="btn-wrapper">
@@ -36,11 +46,12 @@ const Hero = () => {
           <button onClick={handleNextSlide}><IoIosArrowForward /></button>
         </div>
 
-        <div className="hero-content">
-          <p>New Collection</p>
-          <h2>Women Fashion</h2>
+        <div className="hero-text">
+          <p>{textSlider[slide].promo}</p>
+          <h1>{textSlider[slide].title}</h1>
           <Link className="shop-now">SHOP NOW</Link>
         </div>
+
       </div>
     </>
   );

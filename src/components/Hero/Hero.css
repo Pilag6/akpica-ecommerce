@@ -22,16 +22,29 @@
     transform: translateY(-50%);
     
 
-    .btn-wrapper button {
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 10px 20px;
+    button {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 50%;
       border: none;
       cursor: pointer;
     }
 
-    .btn-wrapper button:last-child {
-      right: 10px;
-      left: auto;
+    button:first-child {
+      left: 10px;
+      right: auto;
     }
+
+    button:last-child {
+      right: 10px;
+      /* left: auto; */
+    }
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: var(--black);
   }
 }
