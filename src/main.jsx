@@ -18,5 +18,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </ProductContextProvider>
     </SidebarProvider>
 );
-
-/* BrowserRouter, Routes, Route, Link, NavLink, useNavigate, useParams */

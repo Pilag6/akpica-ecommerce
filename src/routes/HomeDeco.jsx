@@ -15,7 +15,11 @@ const Home = () => {
                             <Cards
                                 key={item.id}
                                 product={item}
-                                category={item.category.toUpperCase()}
+                                category={
+                                    item.category.startsWith("home")
+                                        ? item.category.toUpperCase().slice(5)
+                                        : item.category.toUpperCase()
+                                }
                                 id={item.id}
                                 images={item.images[0]}
                                 title={item.title}

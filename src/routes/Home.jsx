@@ -28,7 +28,7 @@ const Home = () => {
                             <Cards
                                 key={item.id}
                                 product={item}
-                                category={item.category.toUpperCase().slice(7)}
+                                category={item.category.startsWith("women") ? item.category.toUpperCase().slice(7) : item.category.toUpperCase()}
                                 id={item.id}
                                 images={item.images[0]}
                                 title={item.title}
@@ -98,7 +98,11 @@ const Home = () => {
                             <Cards
                                 key={item.id}
                                 product={item}
-                                category={item.category.toUpperCase()}
+                                category={
+                                    item.category.startsWith("home")
+                                        ? item.category.toUpperCase().slice(5)
+                                        : item.category.toUpperCase()
+                                }
                                 id={item.id}
                                 images={item.images[0]}
                                 title={item.title}

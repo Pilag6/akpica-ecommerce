@@ -15,7 +15,7 @@ const Men = () => {
                             <Cards
                                 key={item.id}
                                 product={item}
-                                category={item.category.toUpperCase().slice(7)}
+                                category={item.category.toUpperCase().slice(5)}
                                 id={item.id}
                                 images={item.images[0]}
                                 title={item.title}
