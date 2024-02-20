@@ -3,6 +3,7 @@
 // Components
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
+import Sidebar from "../components/Sidebar/Sidebar.jsx";
 
 // Styles
 import "./MainLayout.css"
@@ -13,6 +14,7 @@ const MainLayout = ({ children }) => {
             <h1>AkPiCa</h1>
             <Header />
             {children}
+            <Sidebar />
             <Footer />
         </div>
     );

@@ -7,13 +7,16 @@ import { BrowserRouter } from "react-router-dom";
 
 // Contexts
 import ProductContextProvider from "./contexts/ProductContext.jsx";
+import SidebarProvider from "./contexts/SidebarContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <ProductContextProvider>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </ProductContextProvider>
+    <SidebarProvider>
+        <ProductContextProvider>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </ProductContextProvider>
+    </SidebarProvider>
 );
 
 /* BrowserRouter, Routes, Route, Link, NavLink, useNavigate, useParams */
