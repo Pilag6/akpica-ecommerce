@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 
 // React Icons
 import { FaStar } from "react-icons/fa";
-import { FaStarHalf } from "react-icons/fa";
+import { FaStarHalfAlt } from "react-icons/fa";
 
 // Styles
 import "./Cards.css";
 
-const Cards = ({ id, images, title, category, price, rating }) => {
+const Cards = ({ id, images, title, category, price, rating, product }) => {
+
+    console.log(product)
     return (
         <>
             <article className="card-article">
@@ -19,7 +21,7 @@ const Cards = ({ id, images, title, category, price, rating }) => {
                 </div>
 
                 <Link className="card-title" to={`/product/${id}`}>
-                    <h2 className="card-title-content">{title}</h2>
+                    <h3 className="card-title-content">{title}</h3>
                 </Link>
 
                 <p className="card-rating">
@@ -37,7 +39,7 @@ const Cards = ({ id, images, title, category, price, rating }) => {
                             <FaStar />
                             <FaStar />
                             <FaStar />
-                            <FaStarHalf />
+                            <FaStarHalfAlt />
                         </>
                     ) : rating > 4.25 ? (
                         <>
@@ -51,7 +53,7 @@ const Cards = ({ id, images, title, category, price, rating }) => {
                             <FaStar />
                             <FaStar />
                             <FaStar />
-                            <FaStarHalf />
+                            <FaStarHalfAlt />
                         </>
                     )}
 
@@ -59,7 +61,7 @@ const Cards = ({ id, images, title, category, price, rating }) => {
                 </p>
 
                 <div className="card-price-btn">
-                    <p className="card-price">${price}</p>
+                    <p className="card-price">${price}.-</p>
                     <button className="card-btn">Add to Cart</button>
                 </div>
             </article>

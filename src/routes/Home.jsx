@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <>
             {/* Women Section */}
-            <section className="women-section">
+            <section className="women-section product-section">
                 <h2>Women</h2>
 
                 <div className="cards-container">
@@ -35,7 +35,7 @@ const Home = () => {
             </section>
 
             {/* Men Section */}
-            <section className="men-section">
+            <section className="men-section product-section">
                 <h2>Men</h2>
 
                 <div className="cards-container">
