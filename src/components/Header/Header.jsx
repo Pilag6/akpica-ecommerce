@@ -9,9 +9,11 @@ import "./Header.css";
 
 // Icons
 import { BsCart4 } from "react-icons/bs";
+import { CartContext } from "../../contexts/CartContext.jsx";
 
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext);
+  const { cart } = useContext(CartContext)
   return (
     <div className="header">
       <Link to={"/"}>
@@ -30,7 +32,7 @@ const Header = () => {
 
       <div className="header-cart" onClick={() => setIsOpen(!isOpen)}>
         <BsCart4 />
-        <span className="header-cart-span">2</span>
+        <span className="header-cart-span">{cart.length}</span>
       </div>
     </div>
   );
