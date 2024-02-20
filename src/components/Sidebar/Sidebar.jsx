@@ -10,7 +10,7 @@ import "./Sidebar.css";
 // Icons
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
-const Sidebar = ({ product }) => {
+const Sidebar = () => {
     const { isOpen, handleClose } = useContext(SidebarContext);
 
     const { cart } = useContext(CartContext);

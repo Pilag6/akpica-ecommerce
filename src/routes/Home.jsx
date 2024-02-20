@@ -4,6 +4,7 @@ import { ProductContext } from "../contexts/ProductContext.jsx";
 // Components
 import Cards from "../components/Cards/Cards.jsx";
 import { Link } from "react-router-dom";
+import Hero from "../components/Hero/Hero.jsx";
 
 const Home = () => {
     const {
@@ -18,6 +19,8 @@ const Home = () => {
 
     return (
         <>
+
+        <Hero />
             {/* Women Section */}
             <section className="women-section product-section">
                 <h2>Women</h2>

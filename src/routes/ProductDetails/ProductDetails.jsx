@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { CartContext } from "../contexts/CartContext.jsx";
+import { CartContext } from "../../contexts/CartContext.jsx";
+
+// Styles
+
+import "./ProductDetails.css"
 
 const ProductDetails = () => {
     const { id } = useParams();
