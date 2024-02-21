@@ -1,11 +1,126 @@
-footer {
-    
+.footer-main-container {
+  border: 1px solid red;
+}
+
+.footer-middle-container {
+  border: 1px solid blue;
+  display: flex;
+  /* adjust paddings later */
+  padding-top: 6.25rem;
+  padding-bottom: 4.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-store-info {
+  /* border: 1px solid yellowgreen; */
+  display: block;
+
+  padding: 1rem;
+
+  .footer-logo {
+    margin-bottom: 2.25rem;
+
+    img {
+      max-height: 50px;
+    }
+  }
+
+  .footer-address {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+
+  }
+
+  .footer-email {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .footer-tel {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+.footer-favicons {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-company-column {
+  /* margin-bottom: 6rem; */
+  
+  h6{
+    margin-bottom: 2.25rem;
+  }
+  li{
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-shop-column {
+  /* margin-bottom: 3.75rem; */
+
+  h6{
+    margin-bottom: 2.25rem;
+  }
+  
+  li{
+    margin-bottom: 1rem;
+  };
+}
+
+.footer-help-column {
+  /* margin-bottom: 7.5rem; */
+
+  h6{
+    margin-bottom: 2.25rem;
+  }
+
+  li{
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-subscribe-column {
+  /* margin-bottom: 7.5rem; */
+
+  h6{
+    margin-bottom: 2.25rem;
+  }
+
+  p{
+    margin-bottom: 1rem;
+  }
+
+  form{
+
+    margin-bottom: 1rem;
+
+  }
 
 }
 
+.footer-form {
+}
 
+.footer-payment-methods {
 
+    
+}
 
-.footer-favicons{
-    display: inline-block;
+.footer-favicons {
+  /* display: inline-block; */
 }

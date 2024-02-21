@@ -8,6 +8,12 @@ import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
+import { FaPaypal } from "react-icons/fa";
+import { FaCcVisa } from "react-icons/fa6";
+import { SiAmericanexpress } from "react-icons/si";
+import { SiKlarna } from "react-icons/si";
+import { FaBitcoin } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <>
@@ -19,7 +25,7 @@ const Footer = () => {
                 <img src={mainLogo} alt="akpica store logo" />
               </Link>
             </div>
-              <p className="footer-address">131 Galtymore rd, apt 12, County Dublin, Ireland
+              <p className="footer-address">131 Galtymore rd, County Dublin, Ireland
               </p>
               <p className="footer-email">akpica@email.com</p>
               <p className="footer-tel">+353 123 456 789</p>
@@ -27,12 +33,13 @@ const Footer = () => {
               <div className="footer-favicons">
                 <FaFacebook  />
                 <FaTwitter />
+
                 <FaInstagram />
                 <FaTiktok />
                 <FaYoutube />
               </div>
           </div>
-          <div className="footer-help-column">
+          <div className="footer-company-column">
             <h6>COMPANY</h6>
             <ul>
               <li>About us</li>
@@ -55,6 +62,32 @@ const Footer = () => {
             
            
             </ul>
+          </div>
+          <div className="footer-help-column">
+          <h6>HELP</h6>
+            <ul>
+              <li>Customer Service</li>
+              <li>Find a Store</li>
+              <li>Legal and Privacy</li>
+              <li>Gift Card</li>
+              
+            </ul>
+          </div>
+          <div className="footer-subscribe-column">
+            <h6>SUBSCRIBE</h6>
+            <p>Get the latest news, new trends, promotions and much more!</p>
+            <form className="footer-form">
+              <input type="email" name="email" placeholder="Your email address" />
+              <input type="submit" value="JOIN"></input>
+            </form>
+            <div className="footer-payment-methods">
+              <p>Secure Payments</p>
+            <FaPaypal />
+            <FaCcVisa />
+            <SiAmericanexpress />
+            <SiKlarna />
+            <FaBitcoin />
+            </div>
           </div>
         </div>
       </footer>
