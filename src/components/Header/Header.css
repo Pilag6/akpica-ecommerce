@@ -1,6 +1,6 @@
 .header {
     background: var(--shade1);
-    padding: 1.2rem;
+    padding: 1.2rem 2rem;
     color: var(--black);
     font-family: system-ui, sans-serif;
     display: flex;
@@ -21,10 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 
     a {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 500;
         color: var(--white);
     }
@@ -36,21 +36,22 @@
 }
 
 .header-cart {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     position: relative;
+    color: var(--black);
 
     .header-cart-span {
         position: absolute;
-        top: -3px;
+        top: -7px;
         right: -7px;
-        background-color: red;
+        background-color: var(--orange);
         color: white;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
     }
 }

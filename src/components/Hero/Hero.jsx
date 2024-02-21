@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Hero.css";
 
@@ -9,15 +8,17 @@ import { GoDotFill } from "react-icons/go";
 //images import
 import banner1 from "../../assets/banner-1.jpg";
 import banner2 from "../../assets/banner-2.jpg";
+import banner3 from "../../assets/banner-3.jpg";
 
 const Hero = () => {
   //array of image-slider
-  const imageSlider = [banner1, banner2];
+  const imageSlider = [banner1, banner2, banner3];
 
   //array of texts
   const textSlider = [
     { promo: "New Collection", title: "Women Fashion" },
     { promo: "New Collection", title: "Men Fashion" },
+    { promo: "Our Gadgets", title: "Only Tech" },
   ];
 
   const [slide, setSlide] = useState(0);
@@ -53,15 +54,17 @@ const Hero = () => {
           <h1>{textSlider[slide].title}</h1>
           {/* <Link className="shop-now">SHOP NOW</Link> */}
 
-          {/* dot-slider */}
-          <div className="dot-container">
+          
+        </div>
+
+        {/* dot-slider */}
+        <div className="dot-container">
             {imageSlider.map((slide, index) => (
               <div className="dot-btn" key={index} onClick={() => handleDot(index)}>
                 <GoDotFill />
               </div>
             ))}
           </div>
-        </div>
       </div>
     </>
   );

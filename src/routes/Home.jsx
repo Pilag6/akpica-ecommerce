@@ -1,10 +1,16 @@
 import { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext.jsx";
+import { Link } from "react-router-dom";
 
 // Components
 import Cards from "../components/Cards/Cards.jsx";
-import { Link } from "react-router-dom";
 import Hero from "../components/Hero/Hero.jsx";
+import SearchByCategory from "../components/SearchByCategory/SearchByCategory.jsx";
+
+// Icons
+import { AiFillPlusCircle } from "react-icons/ai";
+import { MdDashboardCustomize } from "react-icons/md";
+
 
 const Home = () => {
     const {
@@ -21,9 +27,10 @@ const Home = () => {
         <>
 
         <Hero />
+        <SearchByCategory />
             {/* Women Section */}
             <section className="women-section product-section">
-                <h2>Women</h2>
+                <h2 className="product-section-title"><MdDashboardCustomize /> Women</h2>
 
                 <div className="cards-container">
                     {onlyWomen.slice(0, 4).map((item) => {
@@ -42,12 +49,12 @@ const Home = () => {
                     })}
                 </div>
 
-                <Link to={"/women"}>See more products</Link>
+                <Link className="see-more" to={"/women"}>See more products <AiFillPlusCircle /></Link>
             </section>
 
             {/* Men Section */}
             <section className="men-section product-section">
-                <h2>Men</h2>
+                <h2 className="product-section-title"><MdDashboardCustomize /> Men</h2>
 
                 <div className="cards-container">
                     {onlyMen.slice(0, 4).map((item) => {
@@ -65,12 +72,12 @@ const Home = () => {
                         );
                     })}
                 </div>
-                <Link to={"/men"}>See more products</Link>
+                <Link className="see-more" to={"/men"}>See more products <AiFillPlusCircle /></Link>
             </section>
 
             {/* Tech Section */}
             <section className="tech-section product-section">
-                <h2>Tech</h2>
+                <h2 className="product-section-title"><MdDashboardCustomize /> Tech</h2>
 
                 <div className="cards-container">
                     {onlyTech.slice(0, 4).map((item) => {
@@ -88,12 +95,12 @@ const Home = () => {
                         );
                     })}
                 </div>
-                <Link to={"/tech"}>See more products</Link>
+                <Link className="see-more" to={"/tech"}>See more products <AiFillPlusCircle /></Link>
             </section>
 
             {/* Home Section */}
             <section className="home-section product-section">
-                <h2>Home</h2>
+                <h2 className="product-section-title"><MdDashboardCustomize /> Home</h2>
 
                 <div className="cards-container">
                     {onlyHome.slice(0, 4).map((item) => {
@@ -115,12 +122,12 @@ const Home = () => {
                         );
                     })}
                 </div>
-                <Link to={"/home-deco"}>See more products</Link>
+                <Link className="see-more" to={"/home-deco"}>See more products <AiFillPlusCircle /></Link>
             </section>
 
             {/* Beauty Section */}
             <section className="beauty-section product-section">
-                <h2>Beauty</h2>
+                <h2 className="product-section-title"><MdDashboardCustomize /> Beauty</h2>
 
                 <div className="cards-container">
                     {onlyBeauty.slice(0, 4).map((item) => {
@@ -138,12 +145,12 @@ const Home = () => {
                         );
                     })}
                 </div>
-                <Link to={"/beauty"}>See more products</Link>
+                <Link className="see-more" to={"/beauty"}>See more products <AiFillPlusCircle /></Link>
             </section>
 
             {/* Sunglasses Section */}
             <section className="sunglasses-section product-section">
-                <h2>Sunglasses</h2>
+                <h2 className="product-section-title"><MdDashboardCustomize /> Sunglasses</h2>
 
                 <div className="cards-container">
                     {onlySunglasses.slice(0, 4).map((item) => {
@@ -161,12 +168,12 @@ const Home = () => {
                         );
                     })}
                 </div>
-                <Link to={"/sunglasses"}>See more products</Link>
+                <Link className="see-more" to={"/sunglasses"}>See more products <AiFillPlusCircle /></Link>
             </section>
 
             {/* Accessories Section */}
             <section className="accesories-section product-section">
-                <h2>Accesories</h2>
+                <h2 className="product-section-title"><MdDashboardCustomize /> Accesories</h2>
 
                 <div className="cards-container">
                     {onlyAccessories.slice(0, 4).map((item) => {
@@ -184,7 +191,7 @@ const Home = () => {
                         );
                     })}
                 </div>
-                <Link to={"/accessories"}>See more products</Link>
+                <Link className="see-more" to={"/accessories"}>See more products <AiFillPlusCircle /></Link>
             </section>
 
         </>

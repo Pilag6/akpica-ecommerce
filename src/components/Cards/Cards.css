@@ -3,9 +3,10 @@
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f4f4f4;
-    color: #333;
+    color: var(--black);
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
 
     &:hover img {
         transform: scale(1.1);
@@ -26,8 +27,8 @@
 
         .card-category {
             position: absolute;
-            background: yellow;
-            color: black;
+            background: var(--shade2);
+            color: var(--white);
             padding: 0.2rem 0.5rem;
             top: 0.5rem;
             left: 0;
@@ -51,7 +52,7 @@
     }
 
     .card-rating {
-        color: rgb(194, 141, 6);
+        color: var(--orange);
         padding: 10px;
     }
 
@@ -65,20 +66,20 @@
         .card-price {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #3e7730;
+            color: var(--shade4);
         }
 
         .card-btn {
-            background-color: #3e7730;
-            color: #fff;
+            background-color: var(--shade3);
+            color: var(--white);
             padding: 0.5rem 1rem;
             border: none;
-            border-radius: 5px;
+            /* border-radius: 5px; */
             cursor: pointer;
             transition: all 0.3s ease-in-out;
 
             &:hover {
-                background-color: #c0e85c;
+                background-color: var(--shade4);
             }
         }
     }
