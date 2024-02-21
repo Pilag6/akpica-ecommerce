@@ -59,16 +59,15 @@ const Sidebar = () => {
                                 <Link
                                     key={product.id}
                                     to={`/product/${product.id}`}
+                                    // Close sidebar when clicking on a product
+                                    onClick={handleClose}
                                 >
                                     <div className="sidebar-may-like-item">
                                         <img src={product.images[0]} alt="" />
                                         <div className="sidebar-may-like-content">
                                             <h3 className="sidebar-may-like-title">
                                                 {product.title.length > 15
-                                                    ? `${product.title.slice(
-                                                          0,
-                                                          20
-                                                      )}...`
+                                                    ? `${product.title.slice(0,20)}...`
                                                     : product.title}
                                             </h3>
                                             <h3 className="sidebar-may-like-price">
@@ -80,7 +79,7 @@ const Sidebar = () => {
                             );
                         })}
 
-                        <Link to={"/"}>
+                        <Link onClick={handleClose} to={"/"}>
                             Go to the shop and find some products
                         </Link>
                     </div>
