@@ -12,8 +12,7 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext.jsx";
 
 const CartItem = ({ item }) => {
-
-    const { removeFromCart } = useContext(CartContext);
+    const { removeFromCart, increaseQuantity, decreaseQuantity} = useContext(CartContext);
 
     return (
         <div className="sidebar-middle-items">
@@ -27,19 +26,25 @@ const CartItem = ({ item }) => {
                     {/* Title & Remove Icon*/}
                     <Link to={`/product/${item.id}`}>
                         {item.title.length > 25
-                            ? `${item.title.slice(0, 25)}...`
+                            ? `${item.title.slice(0, 20)}...`
                             : item.title}
                     </Link>
 
-                    <IoTrash onClick={() => removeFromCart(item.id)} className="sidebar-title-icon" />
+                    <IoTrash
+                        onClick={() => removeFromCart(item.id)}
+                        className="sidebar-title-icon"
+                    />
                 </div>
 
                 <div className="sidebar-info">
-
                     <div className="sidebar-quantity">
-                        <div className="info-minus"><FaMinusCircle /></div>
+                        <div onClick={() => decreaseQuantity(item.id)}  className="info-minus">
+                            <FaMinusCircle />
+                        </div>
                         <div className="info-quantity">{item.quantity}</div>
-                        <div className="info-plus"><FaPlusCircle /></div>
+                        <div onClick={() => increaseQuantity(item.id)}  className="info-plus">
+                            <FaPlusCircle />
+                        </div>
                     </div>
 
                     <div className="info-price">${item.price}</div>
