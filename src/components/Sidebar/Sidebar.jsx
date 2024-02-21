@@ -10,6 +10,9 @@ import "./Sidebar.css";
 // Icons
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
+// Components
+import CartItem from "./CartItem.jsx";
+
 const Sidebar = () => {
     const { isOpen, handleClose } = useContext(SidebarContext);
 
@@ -17,20 +20,20 @@ const Sidebar = () => {
 
     return (
         <div className={`${!isOpen ? "" : "show-sidebar"} sidebar-container`}>
-            <h1>Sidebar</h1>
-            <div onClick={handleClose}>
-                <FaArrowRightFromBracket />
+            <div className="sidebar-top">
+                <h3>Products in your Cart ({cart.length})</h3>
+                <div onClick={handleClose}>
+                    <FaArrowRightFromBracket />
+                </div>
             </div>
 
-            <ul>
+            <div className="sidebar-middle">
                 {[...cart].map((item) => {
                     return (
-                        <li key={item.id}>
-                            {item.title} | {item.quantity}x
-                        </li>
+                        <CartItem key={item.id} item={item} />
                     );
                 })}
-            </ul>
+            </div>
         </div>
     );
 };

@@ -11,13 +11,17 @@ import "./Header.css";
 import { BsCart4 } from "react-icons/bs";
 import { CartContext } from "../../contexts/CartContext.jsx";
 
+// Logo
+
+import logo from "../../assets/logo-2.png";
+
 const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { cart } = useContext(CartContext)
   return (
     <div className="header">
-      <Link to={"/"}>
-        <h1>AKPICA.</h1>
+      <Link className="header-logo" to={"/"}>
+        <img src={logo} alt="" />
       </Link>
 
       <nav className="header-nav">
