@@ -10,7 +10,16 @@
     top: 0;
     left: 0;
     z-index: 999;
+    transition: top 0.3s ease-in-out;
 }
+
+.nav-visible {
+    top: 0;
+  }
+  
+  .nav-hidden {
+    top: -100px;
+  }
 
 .header-logo {
     width: 200px;
