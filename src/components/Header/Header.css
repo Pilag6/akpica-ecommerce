@@ -73,7 +73,12 @@
     a:not(:last-child) {
         margin-bottom: 20px;
     }
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
+
 
 .dropdown:hover > .nav-others {
     visibility: visible;
