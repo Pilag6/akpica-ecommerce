@@ -6,8 +6,8 @@ const Home = () => {
     const { onlyHome } = useContext(ProductContext);
     return (
         <>
-            <section className="home-section">
-                <h2>Home</h2>
+            <section className="home-section product-section">
+                <h2 className="product-section-title">Deco</h2>
 
                 <div className="cards-container">
                     {onlyHome.map((item) => {

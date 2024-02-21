@@ -6,8 +6,8 @@ const Sunglasses = () => {
     const { onlySunglasses } = useContext(ProductContext);
     return (
         <>
-            <section className="sunglasses-section">
-                <h2>Sunglasses</h2>
+            <section className="sunglasses-section product-section">
+                <h2 className="product-section-title">Sunglasses</h2>
 
                 <div className="cards-container">
                     {onlySunglasses.map((item) => {

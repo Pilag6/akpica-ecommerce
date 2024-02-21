@@ -5,7 +5,7 @@
 }
 
 .product-section {
-    padding: 1rem;
+    padding: 1rem 2rem;
 
     .product-section-title {
         padding: 0.5rem 2rem;
@@ -36,5 +36,23 @@
     &:hover {
         background-color: var(--orange);
         color: var(--white);
+    }
+}
+
+.tech-section {
+    background: var(--shade4);
+
+    .product-section-title {
+        color: var(--white);
+
+    }
+}
+
+.beauty-section {
+    background: var(--shade2);
+
+    .product-section-title {
+        color: var(--white);
+
     }
 }

@@ -16,8 +16,8 @@ const Hero = () => {
 
   //array of texts
   const textSlider = [
-    { promo: "New Collection", title: "Women Fashion" },
-    { promo: "New Collection", title: "Men Fashion" },
+    { promo: "Spring Collection", title: "Blossom in Style" },
+    { promo: "New Collection", title: "Elite Elegance" },
     { promo: "Our Gadgets", title: "Only Tech" },
   ];
 
