@@ -33,21 +33,25 @@ const ProductDetails = () => {
     return (
        <>
     
-       <main>
+     
         <div className="product-container">
-            <div className="product-img">
+            <div className="product">
+            <div className="product-img-box">
             {data.images && data.images.length > 0 && (
                 <img className="main-product-img" src={data.images[0]} alt="" />
             )}</div>
-            <h1 className="product-title">{data.title}</h1>
-            <h2 className="product-description">{data.description}</h2>
-            <h3 className="product-id">ID: {data.id}</h3>
-            <p className="product-price">${data.price}</p>
-            <Link className="home-link" to={"/"}>Go Home</Link>
+            <div className="product-details-box">
+            <Link className="home-link" to={"/"}>Home/The Shop</Link>
+            <h1 className="product-details-title">{data.title}</h1>
+            <h2 className="product-details-price">${data.price}</h2>
+            <p className="product-details-description">{data.description}</p>
+            <h3 className="product-details-id">ID: {data.id}</h3>
             <br />
             <button onClick={() => addToCart(data, data.id)} className="card-btn">Add to Cart</button>
+            </div>
+            </div>
         </div>
-        </main>
+      
         </>
     );
 };
