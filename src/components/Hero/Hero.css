@@ -1,0 +1,85 @@
+.hero {
+  height: calc(100vh - 175px);
+  margin: auto 0;
+  /* background-image: url("../../assets/banner-1.jpg"); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; */
+  /* background-color: aqua; */
+  /* overflow: hidden; */
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .btn-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    
+
+    button {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--gray);
+      cursor: pointer;
+    }
+
+    button:first-child {
+      left: 10px;
+      right: auto;
+    }
+
+    button:last-child {
+      right: 10px;
+      /* left: auto; */
+    }
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: var(--black);
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      animation: slider-animation 10s ease-in-out alternate;
+    }
+
+    @keyframes slider-animation {
+      0%,
+      50% {
+
+      }
+      60%,
+      100% {
+        
+      }
+    }
+
+    .shop-now {
+      border: 2px solid var(--gray);
+      background-color: var(--white);
+      padding: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      /* display: flex;
+      width: 40%;
+      text-align: center; */
+    }
+
+    .shop-now:hover {
+      background-color: var(--orange);
+    }
+  }
+}
