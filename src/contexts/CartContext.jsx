@@ -8,6 +8,19 @@ const CartContextProvider = ({ children }) => {
 
     const [total, setTotal] = useState(0);
 
+    const [quantity, setQuantity] = useState(0);
+
+    // set quantity 
+
+    useEffect(() => {
+        const items = cart.reduce((acc, item) => {
+            return acc + item.quantity;
+        }, 0);
+
+        setQuantity(items);
+    }, [cart]);
+
+    console.log(quantity);
 
     // Update Total on Cart Change
 
@@ -84,6 +97,7 @@ const CartContextProvider = ({ children }) => {
                 increaseQuantity,
                 decreaseQuantity,
                 total,
+                quantity,
             }}
         >
             {children}

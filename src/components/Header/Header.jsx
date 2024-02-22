@@ -21,7 +21,7 @@ import SearchBar from "../Search/SearchBar.jsx";
 
 const Header = () => {
     const { isOpen, setIsOpen } = useContext(SidebarContext);
-    const { cart } = useContext(CartContext);
+    const { quantity } = useContext(CartContext);
 
     //navbar--comment to be remove later
     const [scrollNavbar, setScrollNavbar] = useState(window.scrollY);
@@ -75,7 +75,7 @@ const Header = () => {
 
             <div className="header-cart" onClick={() => setIsOpen(!isOpen)}>
                 <BsCart4 />
-                <span className="header-cart-span">{cart.length}</span>
+                <span className="header-cart-span">{quantity}</span>
             </div>
         </div>
     );

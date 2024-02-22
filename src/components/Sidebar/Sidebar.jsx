@@ -18,12 +18,12 @@ import { ProductContext } from "../../contexts/ProductContext.jsx";
 const Sidebar = () => {
     const { isOpen, handleClose } = useContext(SidebarContext);
     const { productData } = useContext(ProductContext);
-    const { cart, total } = useContext(CartContext);
+    const { cart, total, quantity } = useContext(CartContext);
 
     return (
         <div className={`${!isOpen ? "" : "show-sidebar"} sidebar-container`}>
             <div className="sidebar-top">
-                <h3>Products in your Cart ({cart.length})</h3>
+                <h3>Products in your Cart ({quantity})</h3>
                 <div onClick={handleClose}>
                     <FaArrowRightFromBracket />
                 </div>
