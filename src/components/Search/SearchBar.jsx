@@ -55,6 +55,7 @@ function SearchBar({ placeholder, data }) {
                                 className="dataItem"
                                 to={`/product/${value.id}`}
                                 key={key}
+                                onClick={clearInput}
                             >
                                 <p>{value.title} </p>
                             </Link>

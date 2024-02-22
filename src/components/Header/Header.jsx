@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { SidebarContext } from "../../contexts/SidebarContext.jsx";
+import { ProductContext } from "../../contexts/ProductContext.jsx";
 
 // Router
 import { Link, NavLink } from "react-router-dom";
@@ -15,6 +16,9 @@ import { FaChevronDown } from "react-icons/fa";
 // Logo
 import logo from "../../assets/logo-2.png";
 
+// Components
+import SearchBar from "../Search/SearchBar.jsx";
+
 const Header = () => {
     const { isOpen, setIsOpen } = useContext(SidebarContext);
     const { cart } = useContext(CartContext);
@@ -22,6 +26,7 @@ const Header = () => {
     //navbar--comment to be remove later
     const [scrollNavbar, setScrollNavbar] = useState(window.scrollY);
     const [isVisible, setIsVisible] = useState(true);
+    const { productData } = useContext(ProductContext);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -37,13 +42,20 @@ const Header = () => {
         };
     }, [scrollNavbar]);
 
-    console.log("scroll navbar", scrollNavbar);
-
     return (
         <div className={`header ${isVisible ? "nav-visible" : "nav-hidden"}`}>
             <Link className="header-logo" to={"/"}>
                 <img src={logo} alt="" />
             </Link>
+
+            {/* SEARCH BAR */}
+
+            <div className="header-search">
+                <SearchBar
+                    placeholder="Find your product..."
+                    data={productData}
+                />
+            </div>
 
             <nav className="header-nav">
                 <NavLink to={"/women"}>Women</NavLink>
