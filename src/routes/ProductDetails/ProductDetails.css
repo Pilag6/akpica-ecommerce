@@ -80,6 +80,7 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
     cursor: pointer;
+    color: var(--white);
 }
 
 .product-details-idStock {

@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { SidebarContext } from "../../contexts/SidebarContext.jsx";
+import SearchBar from "../Search/SearchBar.jsx";
+import { ProductContext } from "../../contexts/ProductContext.jsx";
 
 // Router
 import { Link, NavLink } from "react-router-dom";
@@ -18,6 +20,7 @@ import logo from "../../assets/logo-2.png";
 const Header = () => {
     const { isOpen, setIsOpen } = useContext(SidebarContext);
     const { cart } = useContext(CartContext);
+    const {productData} = useContext(ProductContext);
 
     //navbar--comment to be remove later
     const [scrollNavbar, setScrollNavbar] = useState(window.scrollY)
@@ -46,6 +49,12 @@ const Header = () => {
             <Link className="header-logo" to={"/"}>
                 <img src={logo} alt="" />
             </Link>
+
+            {/* SEARCH BAR */}
+
+            <div className="header-search">
+                <SearchBar placeholder="Find your product..." data={productData} />
+            </div>
 
             <nav className="header-nav">
                 <NavLink to={"/women"}>Women</NavLink>
