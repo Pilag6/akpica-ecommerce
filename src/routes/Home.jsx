@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Cards from "../components/Cards/Cards.jsx";
 import Hero from "../components/Hero/Hero.jsx";
 import SearchByCategory from "../components/SearchByCategory/SearchByCategory.jsx";
+import Banner1 from "../components/Banner1/Banner1.jsx";
 
 // Icons
 import { AiFillPlusCircle } from "react-icons/ai";
@@ -85,6 +86,8 @@ const Home = () => {
                     See more products <AiFillPlusCircle />
                 </Link>
             </section>
+
+            <Banner1 />
 
             {/* Tech Section */}
             <section className="tech-section product-section">
