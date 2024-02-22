@@ -10,7 +10,7 @@ const CartContextProvider = ({ children }) => {
 
     const [quantity, setQuantity] = useState(0);
 
-    // set quantity 
+    // set quantity
 
     useEffect(() => {
         const items = cart.reduce((acc, item) => {
@@ -84,6 +84,17 @@ const CartContextProvider = ({ children }) => {
             removeFromCart(id);
         }
     };
+
+    useEffect(() => {
+        const cart = JSON.parse(localStorage.getItem("cart"));
+        if (cart) {
+            setCart(cart);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     return (
         <CartContext.Provider
