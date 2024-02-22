@@ -14,7 +14,7 @@ const Banner1 = () => {
                     />
                 </div>
                 <div className="banner-1-content">
-                    <h4>GLASSES</h4>
+                    <h4>SUNGLASSES</h4>
                     <h3>SALE UP TO 50% OFF</h3>
                     <Link to={"/sunglasses"}>SHOP NOW</Link>
                     <hr />
