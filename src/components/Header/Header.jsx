@@ -22,7 +22,6 @@ const Header = () => {
     const { cart } = useContext(CartContext);
     const {productData} = useContext(ProductContext);
 
-    //navbar--comment to be remove later
     const [scrollNavbar, setScrollNavbar] = useState(window.scrollY)
     const [isVisible, setIsVisible] = useState(true)
 
