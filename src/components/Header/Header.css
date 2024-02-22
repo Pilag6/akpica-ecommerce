@@ -10,16 +10,16 @@
     top: 0;
     left: 0;
     z-index: 999;
-    transition: top 0.3s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 .nav-visible {
     top: 0;
-  }
-  
-  .nav-hidden {
+}
+
+.nav-hidden {
     top: -100%;
-  }
+}
 
 .header-logo {
     width: 200px;
@@ -87,7 +87,6 @@
     }
 }
 
-
 .dropdown:hover > .nav-others {
     visibility: visible;
     display: block;
@@ -96,7 +95,6 @@
 
 .fa-angle-down {
     transition: all 0.8s;
-    
 }
 
 .dropdown:hover .fa-angle-down {
