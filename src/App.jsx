@@ -18,25 +18,28 @@ import Accessories from "./routes/Accessories.jsx";
 
 // Layout
 import MainLayout from "./layouts/MainLayout.jsx";
+import SmoothScroll from "./utils/SmoothScrool.jsx";
 
 function App() {
     return (
         <>
-            <MainLayout>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="product/:id" element={<ProductDetails />} />
-                    <Route path="/checkout" element={<div>Checkout</div>} />
-                    <Route path="*" element={<NotFound />} />
-                    <Route path="women" element={<Women />} />
-                    <Route path="men" element={<Men />} />
-                    <Route path="tech" element={<Tech />} />
-                    <Route path="home-deco" element={<HomeDeco />} />
-                    <Route path="beauty" element={<Beauty />} />
-                    <Route path="sunglasses" element={<Sunglasses />}/>
-                    <Route path="accessories" element={<Accessories />} />
-                </Routes>
-            </MainLayout>
+            <SmoothScroll>
+                <MainLayout>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="product/:id" element={<ProductDetails />} />
+                        <Route path="/checkout" element={<div>Checkout</div>} />
+                        <Route path="*" element={<NotFound />} />
+                        <Route path="women" element={<Women />} />
+                        <Route path="men" element={<Men />} />
+                        <Route path="tech" element={<Tech />} />
+                        <Route path="home-deco" element={<HomeDeco />} />
+                        <Route path="beauty" element={<Beauty />} />
+                        <Route path="sunglasses" element={<Sunglasses />}/>
+                        <Route path="accessories" element={<Accessories />} />
+                    </Routes>
+                </MainLayout>
+            </SmoothScroll>
         </>
     );
 }
