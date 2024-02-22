@@ -9,16 +9,22 @@ import { GoDotFill } from "react-icons/go";
 import banner1 from "../../assets/banner-1.jpg";
 import banner2 from "../../assets/banner-2.jpg";
 import banner3 from "../../assets/banner-3.jpg";
+import banner4 from "../../assets/banner-4.jpg";
+import banner5 from "../../assets/banner-5.jpg";
+
 
 const Hero = () => {
     //array of image-slider
-    const imageSlider = [banner1, banner2, banner3];
+    const imageSlider = [banner1, banner2, banner3, banner4, banner5,];
 
     //array of texts
     const textSlider = [
         { promo: "Spring Collection", title: "Blossom in Style" },
         { promo: "New Collection", title: "Elite Elegance" },
         { promo: "Our Gadgets", title: "Only Tech" },
+        { promo: "Our Watches", title: "Time to Be" },
+        { promo: "The Future is Today", title: "New Reallity" },
+      
     ];
 
     const [slide, setSlide] = useState(0);
