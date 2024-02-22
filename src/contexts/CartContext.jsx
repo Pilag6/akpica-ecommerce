@@ -85,6 +85,9 @@ const CartContextProvider = ({ children }) => {
         }
     };
 
+    // localStorage
+
+    // First get
     useEffect(() => {
         const cart = JSON.parse(localStorage.getItem("cart"));
         if (cart) {
@@ -92,6 +95,7 @@ const CartContextProvider = ({ children }) => {
         }
     }, []);
 
+    // Second set
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
