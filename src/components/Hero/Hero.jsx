@@ -36,7 +36,7 @@ const Hero = () => {
 
     const handleNextSlide = () => {
         setSlide((prevSlide) =>
-        prevSlide === imageSlider.length - 1 ? 0 : prevSlide + 1
+            prevSlide === imageSlider.length - 1 ? 0 : prevSlide + 1
         );
     };
 
@@ -58,7 +58,7 @@ const Hero = () => {
                     </button>
                 </div>
 
-                <div className="hero-text">
+                <div className="hero-text animate__bounceInLeft">
                     <p className="animate__bounceInLeft">
                         {textSlider[slide].promo}
                     </p>
