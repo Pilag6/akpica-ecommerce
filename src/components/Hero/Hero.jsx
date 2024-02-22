@@ -36,7 +36,7 @@ const Hero = () => {
 
     const handleNextSlide = () => {
         setSlide((prevSlide) =>
-            prevSlide === 0 ? imageSlider.length - 1 : prevSlide - 1
+        prevSlide === imageSlider.length - 1 ? 0 : prevSlide + 1
         );
     };
 
