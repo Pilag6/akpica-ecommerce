@@ -20,8 +20,6 @@ const CartContextProvider = ({ children }) => {
         setQuantity(items);
     }, [cart]);
 
-    console.log(quantity);
-
     // Update Total on Cart Change
 
     useEffect(() => {

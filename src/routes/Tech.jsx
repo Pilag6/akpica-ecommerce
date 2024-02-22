@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext.jsx";
 import Cards from "../components/Cards/Cards.jsx";
 
+
+
 const Tech = () => {
     const { onlyTech } = useContext(ProductContext);
     return (

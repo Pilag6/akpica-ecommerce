@@ -79,6 +79,11 @@
     margin-top: 50px;
     cursor: pointer;
     color: var(--white);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--shade3);
+    }
 }
 
 .product-details-idStock {

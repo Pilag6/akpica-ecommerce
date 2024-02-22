@@ -80,3 +80,14 @@
         }
     }
 }
+
+
+@media screen and (max-width: 750px) {
+    .banner-1 {
+        flex-direction: column;
+
+        article {
+            width: 100%;
+        }
+    }
+}

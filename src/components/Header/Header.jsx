@@ -20,7 +20,7 @@ import SearchBar from "../Search/SearchBar.jsx";
 import Navbar from "./Navbar.jsx";
 
 const Header = () => {
-    const { isOpen, setIsOpen, handleToggle } = useContext(SidebarContext);
+    const { isOpen, setIsOpen, setIsToggle } = useContext(SidebarContext);
     const { quantity } = useContext(CartContext);
 
     //navbar--comment to be remove later
@@ -44,7 +44,7 @@ const Header = () => {
 
     return (
         <div className={`header ${isVisible ? "nav-visible" : "nav-hidden"}`}>
-            <Link onClick={handleToggle} className="header-logo" to={"/"}>
+            <Link onClick={() => setIsToggle(false)} className="header-logo" to={"/"}>
                 <img src={logo} alt="" />
             </Link>
 

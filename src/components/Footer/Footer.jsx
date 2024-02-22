@@ -19,6 +19,7 @@ const Footer = () => {
     <>
       <footer className="footer-main-container">
         <div className="footer-middle-container">
+
           <div className="footer-store-info">
             <div className="footer-logo">
               <Link to={"/"}>
@@ -40,6 +41,7 @@ const Footer = () => {
               <FaYoutube />
             </div>
           </div>
+
           <div className="footer-wrapper">
             <div className="footer-company-column">
               <h6>COMPANY</h6>
@@ -87,6 +89,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+
           <div className="footer-subscribe-column">
             <h6>SUBSCRIBE</h6>
             <p>Get the latest news, new trends, promotions and much more!</p>
@@ -114,6 +117,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          
         </div>
       </footer>
     </>
