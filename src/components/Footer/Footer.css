@@ -1,3 +1,159 @@
-footer {
-    
+.footer-main-container {
+  border-top: 2px solid var(--gray);
+  padding: 1rem 2rem;
+}
+
+.footer-middle-container {
+  display: flex;
+  padding-top: 6.25rem;
+  padding-bottom: 4.75rem;
+  padding-right: 1rem;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-store-info {
+  width: 25%;
+  .footer-logo {
+    margin-bottom: 2.25rem;
+    padding: 0.5rem;
+    background-color: var(--shade2);
+    img {
+      max-height: 50px;
+    }
+  }
+
+  .footer-address {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-email {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .footer-tel {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+.footer-favicons {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  svg {
+    color: var(--shade3);
+  }
+}
+
+.footer-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+.footer-company-column {
+  width: 33%;
+  h6 {
+    margin-bottom: 2.25rem;
+    font-size: 0.8rem;
+  }
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-shop-column {
+  width: 33%;
+  h6 {
+    margin-bottom: 2.25rem;
+    font-size: 0.8rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-help-column {
+  width: 33%;
+  h6 {
+    margin-bottom: 2.25rem;
+    font-size: 0.8rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-subscribe-column {
+  width: 25%;
+  h6 {
+    margin-bottom: 2.25rem;
+    font-size: 0.8rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-secure-name {
+    font-weight: 600;
+  }
+
+  form {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-input {
+    width: 85%;
+    padding: 0.8rem;
+    background-color: white;
+    box-shadow: none;
+    border: var(--white);
+  }
+
+  .footer-submit {
+    width: 15%;
+    padding: 0.8rem;
+    background-color: var(--shade2);
+    font-weight: 600;
+    border-radius: 4px;
+    border: var(--white);
+  }
+}
+
+.footer-payment-methods {
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+.footer-payment-icons {
+  display: flex;
+  justify-content: space-between;
+  svg {
+    color: var(--shade3);
+  }
 }
