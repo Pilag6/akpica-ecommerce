@@ -1,17 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { SidebarContext } from "../../contexts/SidebarContext.jsx";
 import { ProductContext } from "../../contexts/ProductContext.jsx";
+import { CartContext } from "../../contexts/CartContext.jsx";
 
 // Router
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Styles
 import "./Header.css";
 
 // Icons
 import { BsCart4 } from "react-icons/bs";
-import { CartContext } from "../../contexts/CartContext.jsx";
-
 
 // Logo
 import logo from "../../assets/logo-2.png";
@@ -21,7 +20,7 @@ import SearchBar from "../Search/SearchBar.jsx";
 import Navbar from "./Navbar.jsx";
 
 const Header = () => {
-    const { isOpen, setIsOpen } = useContext(SidebarContext);
+    const { isOpen, setIsOpen, handleToggle } = useContext(SidebarContext);
     const { quantity } = useContext(CartContext);
 
     //navbar--comment to be remove later
@@ -45,7 +44,7 @@ const Header = () => {
 
     return (
         <div className={`header ${isVisible ? "nav-visible" : "nav-hidden"}`}>
-            <Link className="header-logo" to={"/"}>
+            <Link onClick={handleToggle} className="header-logo" to={"/"}>
                 <img src={logo} alt="" />
             </Link>
 
@@ -59,7 +58,7 @@ const Header = () => {
             </div>
 
             {/* navbar */}
-          <Navbar />
+            <Navbar />
 
             <div className="header-cart" onClick={() => setIsOpen(!isOpen)}>
                 <BsCart4 />
