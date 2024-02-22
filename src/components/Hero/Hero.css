@@ -5,7 +5,6 @@
     background-repeat: no-repeat;
     position: relative;
 
-
     img {
         width: 100%;
         height: 100%;
@@ -49,12 +48,12 @@
         position: absolute;
         top: 30%;
         left: 15%;
-    
+
         p {
             font-size: 1.5rem;
             background: #d9e5e1cf;
             margin-bottom: 5px;
-            width: fit-content ;
+            width: fit-content;
             padding: 0.5rem 1rem;
         }
 
@@ -63,7 +62,7 @@
             color: var(--shade4);
             text-shadow: 1px 1px 2px var(--gray);
             background: #d9e5e1cf;
-            width: fit-content ;
+            width: fit-content;
             padding: 0.5rem 1rem;
             animation-delay: 1.5s;
             margin-bottom: 2rem;
@@ -73,12 +72,12 @@
             font-size: 1.2rem;
             color: var(--white);
             background: var(--shade4);
-            width: fit-content ;
+            width: fit-content;
             padding: 0.5rem 1rem;
             animation-delay: 2s;
             transition: all 0.3s ease-in-out;
             border: 2px solid transparent;
-            
+
             &:hover {
                 /* background: var(--orange); */
                 border: 2px solid var(--gray);
@@ -99,10 +98,16 @@
             cursor: pointer;
             font-size: 20px;
             color: var(--black);
+            transition: all 0.3s ease-in-out;
         }
 
         .dot-btn:hover {
             color: var(--orange);
+        }
+
+        .dot-btn.active {
+            color: var(--orange);
+            font-weight: bold;
         }
     }
 }
@@ -114,8 +119,24 @@
                 font-size: 1rem;
             }
 
-            h1 {
+            h2 {
                 font-size: 2.2rem;
+            }
+        }
+
+        .dot-container {
+            .dot-btn {
+                font-size: 15px;
+            }
+        }
+
+        .btn-wrapper {
+            .right-btn {
+                left: 10px;
+            }
+
+            .left-btn {
+                right: 10px;
             }
         }
     }

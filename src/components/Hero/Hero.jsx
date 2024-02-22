@@ -90,9 +90,9 @@ const Hero = () => {
 
                 {/* dot-slider */}
                 <div className="dot-container">
-                    {imageSlider.map((slide, index) => (
+                    {imageSlider.map((image, index) => (
                         <div
-                            className="dot-btn"
+                            className={`dot-btn ${index === slide ? "active" : ""}`}
                             key={index}
                             onClick={() => handleDot(index)}
                         >

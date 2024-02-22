@@ -39,7 +39,7 @@
         padding: 3rem;
 
         h3 {
-          font-size: 1.5rem;
+            font-size: 1.5rem;
         }
 
         a {
@@ -61,6 +61,6 @@
 
     .bar-btn {
         display: block;
-        left: 0px;
+        left: -5px;
     }
 }
