@@ -10,7 +10,16 @@
     top: 0;
     left: 0;
     z-index: 999;
+    transition: top 0.3s ease-in-out;
 }
+
+.nav-visible {
+    top: 0;
+  }
+  
+  .nav-hidden {
+    top: -100%;
+  }
 
 .header-logo {
     width: 200px;
@@ -73,7 +82,12 @@
     a:not(:last-child) {
         margin-bottom: 20px;
     }
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
+
 
 .dropdown:hover > .nav-others {
     visibility: visible;

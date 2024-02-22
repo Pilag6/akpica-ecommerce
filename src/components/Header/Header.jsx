@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { SidebarContext } from "../../contexts/SidebarContext.jsx";
 
 // Router
@@ -13,14 +13,36 @@ import { CartContext } from "../../contexts/CartContext.jsx";
 import { FaChevronDown } from "react-icons/fa";
 
 // Logo
-
 import logo from "../../assets/logo-2.png";
 
 const Header = () => {
     const { isOpen, setIsOpen } = useContext(SidebarContext);
     const { cart } = useContext(CartContext);
+
+    //navbar--comment to be remove later
+    const [scrollNavbar, setScrollNavbar] = useState(window.scrollY)
+    const [isVisible, setIsVisible] = useState(true)
+
+    useEffect(() => {
+      const handleScroll = () => {
+          const scroll = window.scrollY;
+          setIsVisible(scroll < scrollNavbar || scroll === 0);
+          setScrollNavbar(scroll);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+          window.removeEventListener("scroll", handleScroll);
+      };
+  }, [scrollNavbar]);
+
+    
+      
+      console.log("scroll navbar", scrollNavbar);
+
     return (
-        <div className="header">
+        <div className={`header ${isVisible ? "nav-visible" : "nav-hidden"}`}>
             <Link className="header-logo" to={"/"}>
                 <img src={logo} alt="" />
             </Link>
