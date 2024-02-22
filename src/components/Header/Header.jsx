@@ -20,22 +20,26 @@ const Header = () => {
     const { cart } = useContext(CartContext);
 
     //navbar--comment to be remove later
-    const [scrollNavbar, setScrollNavbar] = useState(0)
+    const [scrollNavbar, setScrollNavbar] = useState(window.scrollY)
     const [isVisible, setIsVisible] = useState(true)
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        }
-    },[])
+      const handleScroll = () => {
+          const scroll = window.scrollY;
+          setIsVisible(scroll < scrollNavbar || scroll === 0);
+          setScrollNavbar(scroll);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+          window.removeEventListener("scroll", handleScroll);
+      };
+  }, [scrollNavbar]);
 
-    const handleScroll = () => {
-        const scroll = window.scrollY
-        setIsVisible((prevScroll) => prevScroll > scroll || scroll === 0)
-        setScrollNavbar(scroll)
-    }
-
+    
+      
+      console.log("scroll navbar", scrollNavbar);
 
     return (
         <div className={`header ${isVisible ? "nav-visible" : "nav-hidden"}`}>
