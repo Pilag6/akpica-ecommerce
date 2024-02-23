@@ -7,7 +7,7 @@ import "./App.css";
 // Pages
 import Home from "./routes/Home.jsx";
 import ProductDetails from "./routes/ProductDetails/ProductDetails.jsx";
-import NotFound from "./routes/NotFound.jsx";
+import NotFound from "./routes/NotFound/NotFound.jsx";
 import Women from "./routes/Women.jsx";
 import Men from "./routes/Men.jsx";
 import Tech from "./routes/Tech.jsx";
