@@ -9,12 +9,14 @@ import "./ProductDetails.css";
 // React Icons
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { FaPlusCircle } from "react-icons/fa";
+import { FaMinusCircle } from "react-icons/fa";
 import Banner1 from "../../components/Banner1/Banner1.jsx";
 
 const ProductDetails = () => {
     const { id } = useParams();
 
-    const { addToCart } = useContext(CartContext);
+    const { cart, addToCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
     const [data, setData] = useState([]);
 
@@ -107,12 +109,26 @@ const ProductDetails = () => {
                         </p>
                     </div>
 
-                    <button
-                        onClick={() => addToCart(data, data.id)}
-                        className="product-card-btn"
-                    >
-                        Add to Cart
-                    </button>
+                    {cart.find(item => item.id === data.id) ? (
+                        <div className="btn-info">
+                            <div className="btn-quantity">
+                                <div onClick={() => decreaseQuantity(data.id)} className="info-minus">
+                                    <FaMinusCircle />
+                                </div>
+                                <div className="info-quantity">{cart.find(item => item.id === data.id).quantity}</div>
+                                <div onClick={() => increaseQuantity(data.id)} className="info-plus">
+                                    <FaPlusCircle />
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <button
+                            onClick={() => addToCart(data, data.id)}
+                            className="product-card-btn"
+                        >
+                            Add to Cart
+                        </button>
+                    )}
                 </div>
             </div>
 
