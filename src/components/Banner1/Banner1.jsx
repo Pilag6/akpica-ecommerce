@@ -10,9 +10,9 @@ const Banner1 = () => {
     return (
         <section className="banner-1">
 
-            <Banner1Card image={photo1} title={"SUNGLASSES"} sale={"SALE UP TO 50% OFF"}/>
-            <Banner1Card image={photo2} title={"SMARTPHONES"} sale={"SALE UP TO 30% OFF"}/>
-            <Banner1Card image={photo3} title={"HOME DECO"} sale={"SALE UP TO 20% OFF"}/>
+            <Banner1Card image={photo1} title={"SUNGLASSES"} sale={"SALE UP TO 50% OFF"} linkTo={"/sunglasses"}/>
+            <Banner1Card image={photo2} title={"SMARTPHONES"} sale={"SALE UP TO 30% OFF"} linkTo={"/tech"}/>
+            <Banner1Card image={photo3} title={"HOME DECO"} sale={"SALE UP TO 20% OFF"} linkTo={"/home-deco"}/>
             
         </section>
     );
