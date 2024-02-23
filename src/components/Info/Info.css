@@ -1,0 +1,42 @@
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding: 2rem;
+    text-align: center;
+
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        height: 190px;
+        padding: 20px;
+        border: 1px solid var(--gray);
+
+        & p {
+            font-size: 0.9rem;;
+            width: 80%;
+        }
+
+        svg {
+            font-size: 2rem;
+            color: var(--shade3);
+        }
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .info {
+        flex-direction: column;
+
+        .info-card {
+            height: 150px;
+            padding: 10px;
+        }
+    }
+
+    
+}

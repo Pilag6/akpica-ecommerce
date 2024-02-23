@@ -11,6 +11,7 @@ import Banner1 from "../components/Banner1/Banner1.jsx";
 // Icons
 import { AiFillPlusCircle } from "react-icons/ai";
 import { MdDashboardCustomize } from "react-icons/md";
+import Info from "../components/Info/Info.jsx";
 
 const Home = () => {
     const {
@@ -227,6 +228,8 @@ const Home = () => {
                     See more products <AiFillPlusCircle />
                 </Link>
             </section>
+
+            <Info />
         </>
     );
 };
