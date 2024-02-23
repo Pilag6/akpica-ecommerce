@@ -39,6 +39,12 @@ ul {
   list-style: none;
 }
 
+/* SELECTION */
+
+::selection {
+  background-color: var(--white);
+  color: var(--shade3);
+}
 /* SCROLLBAR */
 
 /* width */
