@@ -9,6 +9,7 @@ import "./ProductDetails.css";
 // React Icons
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+import Banner1 from "../../components/Banner1/Banner1.jsx";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -114,6 +115,8 @@ const ProductDetails = () => {
                     </button>
                 </div>
             </div>
+
+            <Banner1 />
         </>
     );
 };
