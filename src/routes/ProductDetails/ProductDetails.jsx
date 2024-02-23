@@ -105,7 +105,7 @@ const ProductDetails = () => {
                             | ID: {data.id} |
                         </h3>
                         <p className="product-details-stock">
-                            Only {data.stock} left
+                            Only {data.stock - (cart.find(item => item.id === data.id)?.quantity || 0)} left
                         </p>
                     </div>
 
