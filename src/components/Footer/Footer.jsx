@@ -27,7 +27,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="footer-address">
-              131 Galtymore rd, County Dublin, Ireland
+              2024 Crusaders St, Berlin
             </p>
             <p className="footer-email">akpica@email.com</p>
             <p className="footer-tel">+353 123 456 789</p>
@@ -44,7 +44,7 @@ const Footer = () => {
 
           <div className="footer-wrapper">
             <div className="footer-company-column">
-              <h6>COMPANY</h6>
+              <h3>COMPANY</h3>
               <ul>
                 <li>About us</li>
                 <li>Careers</li>
@@ -54,7 +54,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="footer-shop-column">
-              <h6>SHOP</h6>
+              <h3>SHOP</h3>
               <ul>
                 <li>
                   <Link to={"women"}>Women</Link>
@@ -80,7 +80,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="footer-help-column">
-              <h6>HELP</h6>
+              <h3>HELP</h3>
               <ul>
                 <li>Customer Service</li>
                 <li>Find a Store</li>
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-subscribe-column">
-            <h6>SUBSCRIBE</h6>
+            <h3>SUBSCRIBE</h3>
             <p>Get the latest news, new trends, promotions and much more!</p>
             <form className="footer-form">
               <input
