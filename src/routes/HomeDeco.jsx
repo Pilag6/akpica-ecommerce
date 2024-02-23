@@ -1,5 +1,9 @@
 import { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext.jsx";
+
+// Components
+import Banner1 from "../components/Banner1/Banner1.jsx";
+import Info from "../components/Info/Info.jsx";
 import Cards from "../components/Cards/Cards.jsx";
 
 const Home = () => {
@@ -30,6 +34,9 @@ const Home = () => {
                     })}
                 </div>
             </section>
+
+            <Banner1 />
+            <Info />
         </>
     );
 };
