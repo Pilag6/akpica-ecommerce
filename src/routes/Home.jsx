@@ -7,11 +7,11 @@ import Cards from "../components/Cards/Cards.jsx";
 import Hero from "../components/Hero/Hero.jsx";
 import SearchByCategory from "../components/SearchByCategory/SearchByCategory.jsx";
 import Banner1 from "../components/Banner1/Banner1.jsx";
+import Info from "../components/Info/Info.jsx";
 
 // Icons
 import { AiFillPlusCircle } from "react-icons/ai";
 import { MdDashboardCustomize } from "react-icons/md";
-import Info from "../components/Info/Info.jsx";
 
 const Home = () => {
     const {

@@ -39,6 +39,7 @@ const ProductContextProvider = ({ children }) => {
     const onlySunglasses = filterAndShuffle(productData, ["sunglasses"]);
     const onlyHome = filterAndShuffle(productData, ["home", "furniture", "lighting",]);
     const onlyAccessories = filterAndShuffle(productData, ["automotive", "motorcycle",]);
+    const allOfThem = filterAndShuffle(productData, ["women", "tops", "men", "smartphones", "laptops", "fragrances", "skincare", "sunglasses", "home", "furniture", "lighting", "automotive", "motorcycle",]);
 
     return (
         <ProductContext.Provider
@@ -52,6 +53,7 @@ const ProductContextProvider = ({ children }) => {
                 onlyHome,
                 onlyAccessories,
                 onlySunglasses,
+                allOfThem
             }}
         >
             {children}
