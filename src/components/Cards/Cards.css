@@ -77,6 +77,7 @@
             /* border-radius: 5px; */
             cursor: pointer;
             transition: all 0.3s ease-in-out;
+            width: 110px;
 
             &:hover {
                 background-color: var(--shade4);
@@ -93,8 +94,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                gap: 1rem;
+                /* gap: 1rem; */
                 outline: 1px solid var(--gray);
+                width: 110px;
         
                 .info-minus,
                 .info-plus {
@@ -102,7 +104,7 @@
                     color: var(--shade2);
                     cursor: pointer;
                     transition: all 0.3s ease-in-out;
-                    background-color: var(--black);
+                    background-color: var(--shade3);
                     padding: 0.44rem 0.54rem;
         
                     &:hover {
