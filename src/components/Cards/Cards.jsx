@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 // React Icons
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+import { FaPlusCircle } from "react-icons/fa";
+import { FaMinusCircle } from "react-icons/fa";
 
 // Styles
 import "./Cards.css";
@@ -14,7 +16,9 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext.jsx";
 
 const Cards = ({ id, images, title, category, price, rating, product }) => {
-    const { addToCart } = useContext(CartContext);
+    const { cart, addToCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
+
+    
 
     // console.log(product)
     return (
@@ -67,7 +71,23 @@ const Cards = ({ id, images, title, category, price, rating, product }) => {
 
                 <div className="card-price-btn">
                     <p className="card-price">${price}.-</p>
-                    <button onClick={() => addToCart(product, id)} className="card-btn">Add to Cart</button>
+                    {/* <button onClick={() => addToCart(product, id)} className="card-btn">Add to Cart</button> */}
+
+                    {cart.find(item => item.id === id) ? (
+                        <div className="btn-card-info">
+                            <div className="btn-card-quantity">
+                                <div onClick={() => decreaseQuantity(id)} className="info-minus">
+                                    <FaMinusCircle />
+                                </div>
+                                <div className="info-quantity">{cart.find(item => item.id === id).quantity}</div>
+                                <div onClick={() => increaseQuantity(id)} className="info-plus">
+                                    <FaPlusCircle />
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <button onClick={() => addToCart(product, id)} className="card-btn">Add to Cart</button>
+                    )}
                 </div>
             </article>
         </>
