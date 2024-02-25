@@ -20,7 +20,6 @@ const ProductDetails = () => {
         useContext(CartContext);
 
     const [data, setData] = useState([]);
-    
 
     const INDIVIDUAL_URL = "https://dummyjson.com/products/";
 
@@ -53,7 +52,7 @@ const ProductDetails = () => {
     return (
         <>
             <div className="product-container">
-            <div className="product-img-box">
+                <div className="product-img-box">
                     {data.images && data.images.length > 1 && (
                         <div className="product-imgs">
                             {data.images.slice(0, 4).map((img, index) => (
