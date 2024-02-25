@@ -1,31 +1,62 @@
 .product-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    justify-content: flex-end;
     padding: 2rem 5rem;
     width: 100%;
 }
 
 .product-img-box {
     width: 50%;
-    height: 480px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
+    padding: 1rem;
+
+    .product-imgs {
+        width: 20%;
+        height: 450px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: block;
+            object-fit: cover;
+            object-position: top;
+            cursor: pointer;
+
+            &:hover {
+                outline: 1px solid var(--shade2);
+            }
+        }
+    }
 
     .main-product-img {
         width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-        object-position: top;
+        /* margin: auto; */
+        height: 450px;
+
+        img {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 100%;
+            display: block;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            object-position: top;
+        }
     }
 }
 
 .product-details-box {
     width: 50%;
     padding: 3rem;
-    padding-left: 60px;
+    /* padding-left: 60px; */
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 50px;
@@ -127,7 +158,8 @@
                 background: var(--white);
             }
         }
-    }}
+    }
+}
 
 .product-details-idStock {
     display: flex;
@@ -144,11 +176,36 @@
 @media only screen and (max-width: 900px) {
     .product-container {
         flex-direction: column;
-        padding: 2rem 1rem;
+        padding: 2rem 0rem;
     }
 
     .product-details-box,
     .product-img-box {
         width: 100%;
+    }
+
+    .product-img-box {
+        flex-direction: column;
+        .product-imgs {
+            align-items: flex-start;
+            justify-content: space-evenly;
+            flex-direction: row;
+            order: 2;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+
+            img {
+                width: 100px;
+                aspect-ratio: 1/1;
+                height: 100px;
+            }
+        }
+        .main-product-img {
+            order: 1;
+            margin: 0 auto;
+            width: 100%;
+        }
     }
 }
