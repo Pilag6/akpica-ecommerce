@@ -1,9 +1,9 @@
 //Context
 import { useContext } from "react";
-import { ProductContext } from "../../contexts/ProductContext.jsx";
+import { ProductContext } from "../contexts/ProductContext.jsx";
 
 // Component
-import Cards from "../../components/Cards/Cards.jsx";
+import Cards from "../components/Cards/Cards.jsx";
 
 // Style
 import "./NotFound.css";
@@ -14,7 +14,7 @@ import { MdDashboardCustomize } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 // Images
-import notFound from "../../assets/not-found.svg";
+import notFound from "../assets/not-found.svg";
 
 const NotFound = () => {
     const { allOfThem } = useContext(ProductContext);
