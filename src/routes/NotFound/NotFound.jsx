@@ -1,5 +1,8 @@
+//Context
 import { useContext } from "react";
 import { ProductContext } from "../../contexts/ProductContext.jsx";
+
+// Component
 import Cards from "../../components/Cards/Cards.jsx";
 
 // Style
@@ -27,7 +30,8 @@ const NotFound = () => {
                 Looks like the page you&apos;re searching for has embarked on a
                 cosmic journey without us. While we wait for ground control to
                 reestablish contact, why not explore our stellar collection of
-                products? Spacewalk through our featured collections and discover stellar finds! 🚀🌌
+                products? Spacewalk through our featured collections and
+                discover stellar finds! 🚀🌌
             </p>
 
             <hr />

@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+
+// Context
 import { CartContext } from "../../contexts/CartContext.jsx";
 
 // Styles
@@ -20,8 +22,7 @@ import Info from "../../components/Info/Info.jsx";
 const ProductDetails = () => {
     const { id } = useParams();
 
-    const { cart, addToCart, increaseQuantity, decreaseQuantity } =
-        useContext(CartContext);
+    const { cart, addToCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
     const [data, setData] = useState([]);
 

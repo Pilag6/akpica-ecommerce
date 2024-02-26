@@ -5,21 +5,23 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 // Pages
-import Home from "./routes/Home.jsx";
-import ProductDetails from "./routes/ProductDetails/ProductDetails.jsx";
-import NotFound from "./routes/NotFound/NotFound.jsx";
-import Women from "./routes/Women.jsx";
-import Men from "./routes/Men.jsx";
-import Tech from "./routes/Tech.jsx";
-import HomeDeco from "./routes/HomeDeco.jsx";
-import Beauty from "./routes/Beauty.jsx";
-import Sunglasses from "./routes/Sunglasses.jsx";
 import Accessories from "./routes/Accessories.jsx";
+import Beauty from "./routes/Beauty.jsx";
+import Checkout from "./routes/Checkout/Checkout.jsx";
+import Home from "./routes/Home.jsx";
+import HomeDeco from "./routes/HomeDeco.jsx";
+import Men from "./routes/Men.jsx";
+import NotFound from "./routes/NotFound/NotFound.jsx";
+import ProductDetails from "./routes/ProductDetails/ProductDetails.jsx";
+import Sunglasses from "./routes/Sunglasses.jsx";
+import Tech from "./routes/Tech.jsx";
+import Women from "./routes/Women.jsx";
 
 // Layout
 import MainLayout from "./layouts/MainLayout.jsx";
+
+// Util
 import SmoothScroll from "./utils/SmoothScrool.jsx";
-import Checkout from "./routes/Checkout/Checkout.jsx";
 
 function App() {
     return (

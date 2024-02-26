@@ -1,10 +1,17 @@
-import { useContext } from "react";
-import "./Checkout.css";
-import { CartContext } from "../../contexts/CartContext.jsx";
-import CartItem from "../../components/Sidebar/CartItem.jsx";
 import { Link } from "react-router-dom";
+
+// Context
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext.jsx";
 import { ProductContext } from "../../contexts/ProductContext.jsx";
+
+// Styles
+import "./Checkout.css";
+
+// Component
 import Cards from "../../components/Cards/Cards.jsx";
+import CartItem from "../../components/Sidebar/CartItem.jsx";
+
 // Icons
 import { AiFillPlusCircle } from "react-icons/ai";
 import { MdDashboardCustomize } from "react-icons/md";

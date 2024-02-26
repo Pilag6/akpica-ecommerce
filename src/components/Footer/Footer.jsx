@@ -53,6 +53,7 @@ const Footer = () => {
                 <li>Contact us</li>
               </ul>
             </div>
+
             <div className="footer-shop-column">
               <h3>SHOP</h3>
               <ul>
@@ -79,6 +80,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+
             <div className="footer-help-column">
               <h3>HELP</h3>
               <ul>
@@ -88,6 +90,7 @@ const Footer = () => {
                 <li>Gift Card</li>
               </ul>
             </div>
+            
           </div>
 
           <div className="footer-subscribe-column">

@@ -1,6 +1,8 @@
 import { useContext } from "react";
-import { ProductContext } from "../contexts/ProductContext.jsx";
 import { Link } from "react-router-dom";
+
+// Context
+import { ProductContext } from "../contexts/ProductContext.jsx";
 
 // Components
 import Cards from "../components/Cards/Cards.jsx";
