@@ -11,7 +11,11 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaPlusCircle } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
+
+// Components
 import Banner1 from "../../components/Banner1/Banner1.jsx";
+import ProductDescriptions from "./ProductDescriptions.jsx";
+import Info from "../../components/Info/Info.jsx";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -171,7 +175,10 @@ const ProductDetails = () => {
                 </div>
             </div>
 
+            <ProductDescriptions desc={data.description} rev={data.stock}/>
+
             <Banner1 />
+            <Info />
         </>
     );
 };
