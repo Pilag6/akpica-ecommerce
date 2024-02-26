@@ -2,6 +2,10 @@
 
 ![akpika-screen](https://github.com/Pilag6/akpica-ecommerce/assets/79191808/301cd65c-27c8-4102-95c7-35ec80deb5e1)
 
+**[⏩ Link to our Page](https://akpica.onrender.com/)**
+
+---
+
 Welcome to **AKPICA**, your go-to destination for a seamless and enjoyable online shopping experience. Our platform is designed to provide users with a range of features that make browsing, selecting, and purchasing products a breeze.
 
 # The AKPICA Team
@@ -64,6 +68,9 @@ To get started with **AKPICA**, simply visit our website ***[Akpica](https://akp
 7. **[MyColorSpace](https://mycolor.space/)**
 8. **[Squoosh](https://squoosh.app/)**
 9. **[WakaTime](https://wakatime.com/)**
+10. Node.js
+11. npm
+12. VSCode
 
 ---
 
