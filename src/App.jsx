@@ -35,7 +35,6 @@ function App() {
                             element={<ProductDetails />}
                         />
                         <Route path="/checkout" element={<Checkout />} />
-                        <Route path="/*" element={<NotFound />} />
                         <Route path="women" element={<Women />} />
                         <Route path="men" element={<Men />} />
                         <Route path="tech" element={<Tech />} />
@@ -43,6 +42,7 @@ function App() {
                         <Route path="beauty" element={<Beauty />} />
                         <Route path="sunglasses" element={<Sunglasses />} />
                         <Route path="accessories" element={<Accessories />} />
+                        <Route path="/*" element={<NotFound />} />
                     </Routes>
                 </MainLayout>
             </SmoothScroll>
