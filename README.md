@@ -1,5 +1,7 @@
 # AkPiCa E-commerce Platform
 
+![akpika-screen](https://github.com/Pilag6/akpica-ecommerce/assets/79191808/301cd65c-27c8-4102-95c7-35ec80deb5e1)
+
 Welcome to **AKPICA**, your go-to destination for a seamless and enjoyable online shopping experience. Our platform is designed to provide users with a range of features that make browsing, selecting, and purchasing products a breeze.
 
 # The AKPICA Team
