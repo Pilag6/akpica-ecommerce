@@ -11,12 +11,17 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaPlusCircle } from "react-icons/fa";
 import { FaMinusCircle } from "react-icons/fa";
+
+// Components
 import Banner1 from "../../components/Banner1/Banner1.jsx";
+import ProductDescriptions from "./ProductDescriptions.jsx";
+import Info from "../../components/Info/Info.jsx";
 
 const ProductDetails = () => {
     const { id } = useParams();
 
-    const { cart, addToCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
+    const { cart, addToCart, increaseQuantity, decreaseQuantity } =
+        useContext(CartContext);
 
     const [data, setData] = useState([]);
 
@@ -36,16 +41,39 @@ const ProductDetails = () => {
         fetchData();
     }, [id]);
 
+    const [mainImage, setMainImage] = useState("");
+
+    const handleImageClick = (img) => {
+        setMainImage(img);
+    };
+
+    useEffect(() => {
+        if (data.images && data.images.length > 0) {
+            setMainImage(data.images[0]);
+        }
+    }, [data]);
+
     return (
         <>
             <div className="product-container">
                 <div className="product-img-box">
+                    {data.images && data.images.length > 1 && (
+                        <div className="product-imgs">
+                            {data.images.slice(0, 4).map((img, index) => (
+                                <img
+                                    key={index}
+                                    className="product-img"
+                                    src={img}
+                                    alt=""
+                                    onMouseOver={() => handleImageClick(img)}
+                                />
+                            ))}
+                        </div>
+                    )}
                     {data.images && data.images.length > 0 && (
-                        <img
-                            className="main-product-img"
-                            src={data.images[0]}
-                            alt=""
-                        />
+                        <div className="main-product-img">
+                            <img src={mainImage} alt="" />
+                        </div>
                     )}
                 </div>
 
@@ -105,18 +133,33 @@ const ProductDetails = () => {
                             | ID: {data.id} |
                         </h3>
                         <p className="product-details-stock">
-                            Only {data.stock - (cart.find(item => item.id === data.id)?.quantity || 0)} left
+                            Only{" "}
+                            {data.stock -
+                                (cart.find((item) => item.id === data.id)
+                                    ?.quantity || 0)}{" "}
+                            left
                         </p>
                     </div>
 
-                    {cart.find(item => item.id === data.id) ? (
+                    {cart.find((item) => item.id === data.id) ? (
                         <div className="btn-info">
                             <div className="btn-quantity">
-                                <div onClick={() => decreaseQuantity(data.id)} className="info-minus">
+                                <div
+                                    onClick={() => decreaseQuantity(data.id)}
+                                    className="info-minus"
+                                >
                                     <FaMinusCircle />
                                 </div>
-                                <div className="info-quantity">{cart.find(item => item.id === data.id).quantity}</div>
-                                <div onClick={() => increaseQuantity(data.id)} className="info-plus">
+                                <div className="info-quantity">
+                                    {
+                                        cart.find((item) => item.id === data.id)
+                                            .quantity
+                                    }
+                                </div>
+                                <div
+                                    onClick={() => increaseQuantity(data.id)}
+                                    className="info-plus"
+                                >
                                     <FaPlusCircle />
                                 </div>
                             </div>
@@ -132,7 +175,10 @@ const ProductDetails = () => {
                 </div>
             </div>
 
+            <ProductDescriptions desc={data.description} rev={data.stock}/>
+
             <Banner1 />
+            <Info />
         </>
     );
 };
