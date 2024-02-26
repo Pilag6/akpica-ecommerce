@@ -57,8 +57,11 @@ Ready to make your purchase? Our streamlined checkout process ensures a quick an
 ## Getting Started
 To get started with **AKPICA**, simply visit our website ***[Akpica](https://akpica.onrender.com/)***. Once there, you can start exploring our vast product catalog, adding items to your cart, and experiencing the convenience of online shopping.
 
-## Tools
+## API
 
+### **[DummyJSON](https://dummyjson.com/)**
+
+## Tools
 1. **[Vite](https://vitejs.dev/)**
 2. **[React](https://react.dev/)**
 3. **[React Router](https://reactrouter.com/en/main)**
