@@ -1,0 +1,19 @@
+.checkout-container {
+    padding: 2rem;
+    color: var(--black);
+    
+    .checkout-title {
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--shade1);
+      font-size: 2rem;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  
+      svg {
+        font-size: 3rem;
+      }
+    }
+  }

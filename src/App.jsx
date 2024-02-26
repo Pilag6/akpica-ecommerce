@@ -19,6 +19,7 @@ import Accessories from "./routes/Accessories.jsx";
 // Layout
 import MainLayout from "./layouts/MainLayout.jsx";
 import SmoothScroll from "./utils/SmoothScrool.jsx";
+import Checkout from "./routes/Checkout/Checkout.jsx";
 
 function App() {
     return (
@@ -28,7 +29,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="product/:id" element={<ProductDetails />} />
-                        <Route path="/checkout" element={<div>Checkout</div>} />
+                        <Route path="/checkout" element={<Checkout />} />
                         <Route path="*" element={<NotFound />} />
                         <Route path="women" element={<Women />} />
                         <Route path="men" element={<Men />} />

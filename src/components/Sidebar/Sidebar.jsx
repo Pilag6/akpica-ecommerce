@@ -42,7 +42,7 @@ const Sidebar = () => {
                     <div className="sidebar-total-price">
                         Total: <span>${total}.-</span>
                     </div>
-                    <Link className="sidebar-bottom-checkout" to={"/"}>
+                    <Link className="sidebar-bottom-checkout" to={"/checkout"}>
                         CHECKOUT
                     </Link>
                 </div>
