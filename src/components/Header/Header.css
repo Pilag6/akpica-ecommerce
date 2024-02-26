@@ -41,7 +41,7 @@
     a {
         font-size: 1.1rem;
         font-weight: 500;
-        color: var(--white);
+        color: #fff;
         display: flex;
         align-items: flex-end;
         gap: 5px;
