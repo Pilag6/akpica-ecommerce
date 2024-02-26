@@ -59,7 +59,8 @@ To get started with **AKPICA**, simply visit our website ***[Akpica](https://akp
 
 ## API
 
-### **[DummyJSON](https://dummyjson.com/)**
+In this project, we utilized **[DummyJSON](https://dummyjson.com/)** to generate realistic dummy data for testing, prototyping, and development purposes. **DummyJSON** is a web-based tool that allows users to create custom JSON data templates quickly and easily.
+
 
 ## Tools
 1. **[Vite](https://vitejs.dev/)**
